@@ -47,7 +47,7 @@
   <body class="font-ubuntu m-0 p-0 overflow-x-hidden bg-darkgreen">
     <nav
       id="navbar"
-      class="fixed flex top-0 w-screen z-40 backdrop-opacity-10 bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded-b md:bg-transparent bg-darkgreen md:h-[150px] duration-300"
+      class="fixed flex top-0 w-screen z-40 backdrop-opacity-10 border-gray-200 px-2 sm:px-4 py-2.5 rounded-b md:bg-transparent bg-darkgreen md:h-[150px] duration-300"
     >
       <div
         class="container flex flex-wrap flex-end justify-end items-center mx-auto"
@@ -950,10 +950,15 @@
   speed: 50,
   waitUntilVisible: true,
 })
-  .type("DiNacom", { delay: 300 })
-  .move(-4)
+  .type("DiNa", { delay: 300 })
+  .move(-1)
   .delete(1)
   .type("n")
+  .move(null, { to: "END" })
+  .type("Com")
+  .move(-2)
+  .delete(1)
+  .type("c")
   .move(null, { to: "END" })
   
   .pause(300)
